@@ -25,10 +25,10 @@ jobs:
       - run: echo "${{ secrets.MY_SECRET1 }}"
   Explore-GitHub-Actions2:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     shell: bash
-    #     working-directory: /.github/workflows
+    defaults:
+      run:
+        shell: bash
+        working-directory: ../../
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -39,7 +39,6 @@ jobs:
           cd ..
           echo "show parent folder content"
           ls
-        working-directory: randomfolder
   Explore-GitHub-Actions3:
     runs-on: ubuntu-latest
     # defaults:
