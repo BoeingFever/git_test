@@ -34,6 +34,10 @@ jobs:
       - run: |
           echo "my github action working directory"
           pwd
+          echo "show current folder content"
+          ls
+          cd ..
+          echo "show parent folder content"
           ls
         working-directory: testfolder1
   Explore-GitHub-Actions3:
@@ -47,6 +51,8 @@ jobs:
         with: 
           path: 'testfolder1'
       - run: |
+          echo "show current folder content"
+          ls
           echo "my github action working directory ${{ github.workspace }}"
           ls ${{ github.workspace }}
           cd testfolder1
