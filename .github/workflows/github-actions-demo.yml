@@ -31,8 +31,9 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /tmp/project
+        working-directory: /.github/workflows
     steps:
+      - use: 
       - run: |
           echo "my github action working directory"
           pwd
