@@ -33,7 +33,6 @@ jobs:
         shell: bash
         working-directory: /.github/workflows
     steps:
-      - use: 
       - run: |
           echo "my github action working directory"
           pwd
