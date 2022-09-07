@@ -30,7 +30,7 @@ jobs:
     #     shell: bash
     #     working-directory: /.github/workflows
     steps:
-
+      - uses: actions/checkout@v3
       - run: |
           echo "my github action working directory"
           pwd
@@ -46,5 +46,7 @@ jobs:
         with: 
           path: 'testfolder1'
       - run: |
-          echo "my github action working directory"
-          pwd
+          echo "my github action working directory ${{ github.workspace }}"
+          ls ${{ github.workspace }}
+          cd testfolder1
+          ls
