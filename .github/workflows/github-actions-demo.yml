@@ -23,9 +23,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "${{ github.token }}"
       - run: echo "${{ secrets.MY_SECRET1 }}"
-      - run: |
-          echo "github default working directory"
-          pwd
   Explore-GitHub-Actions2:
     runs-on: ubuntu-latest
     # defaults:
@@ -33,7 +30,21 @@ jobs:
     #     shell: bash
     #     working-directory: /.github/workflows
     steps:
+
       - run: |
           echo "my github action working directory"
           pwd
-        working-directory: /testfolder1
+        working-directory: testfolder1
+  Explore-GitHub-Actions3:
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     shell: bash
+    #     working-directory: /.github/workflows
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          path: 'testfolder1'
+      - run: |
+          echo "my github action working directory"
+          pwd
