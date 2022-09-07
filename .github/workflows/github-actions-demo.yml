@@ -36,4 +36,4 @@ jobs:
       - run: |
           echo "my github action working directory"
           pwd
-        working-directory: /.github/workflows 
+        working-directory: /testfolder1
