@@ -34,6 +34,7 @@ jobs:
       - run: |
           echo "my github action working directory"
           pwd
+          ls
         working-directory: testfolder1
   Explore-GitHub-Actions3:
     runs-on: ubuntu-latest
@@ -49,4 +50,4 @@ jobs:
           echo "my github action working directory ${{ github.workspace }}"
           ls ${{ github.workspace }}
           cd testfolder1
-          ls
+          pwd
